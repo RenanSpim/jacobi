@@ -1,0 +1,28 @@
+# Arquivos de log
+*.log
+
+# Arquivos compilados e executáveis
+# Específicos deste projeto
+sequencial
+paralelo
+
+# Binários e arquivos objeto em geral
+*.o
+*.exe
+*.out
+*.dll
+*.so
+
+# Diretórios de build
+build/
+bin/
+
+# Arquivos de configuração de IDEs e editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
