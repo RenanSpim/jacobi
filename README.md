@@ -30,10 +30,10 @@ Para compilar e executar os programas, utilize os seguintes comandos no seu term
 ### Compilação
 
 ```bash
+gcc -fopenmp -o jacobi main.c -lm
+
 # Versão sequencial
-gcc -o sequencial jacobi_sequencial.c -lm
-./sequencial
+./jacobi
 
 # Versão paralela
-gcc -fopenmp -o paralelo jacobi_paralelo.c -lm
-./paralelo (número de threads) (schedule) (chunk)
+./jacobi (número de threads) (schedule) (chunk)
