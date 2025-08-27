@@ -1,6 +1,6 @@
 #include "jacobi_paralelo.h"
 
-int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chunk_size) {
+int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chunk_size, int num_threads) {
     double *x_new = malloc(N * sizeof(double));
     int iterations = 0;
     double error = CRITERIO_PARADA + 1.0;
@@ -14,13 +14,14 @@ int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chu
     case DYNAMIC: kind = omp_sched_dynamic; break;
     default: 
         printf("Digite um tipo correto\n"); 
-        return NULL;
+        return 0;
         break;
     }
+    omp_set_num_threads(num_threads);
     omp_set_schedule(kind, chunk_size);
 
     clock_gettime(CLOCK_MONOTONIC, &inicio);
-    while (iterations++ < MAX_ITER && error <= CRITERIO_PARADA) {
+    while (iterations++ < MAX_ITER && error > CRITERIO_PARADA) {
         error = 0.0;
         #pragma omp parallel for schedule(runtime) reduction(max:error)
         for (int i = 0; i < N; i++) {

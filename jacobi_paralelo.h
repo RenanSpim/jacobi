@@ -14,4 +14,4 @@ typedef enum {
     GUIDED
 } ScheduleType;
 
-int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chunk_size);
+int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chunk_size, int num_threads);
