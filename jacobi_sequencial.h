@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define CRITERIO_PARADA 0.00001
+#define N 2000
+#define CRITERIO_PARADA 1e-5
 
 // TODO
 int jacobi_sequencial() {
