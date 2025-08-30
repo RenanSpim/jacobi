@@ -1,6 +1,6 @@
 #include "../include/jacobi_paralelo.h"
 
-int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chunk_size, int num_threads) {
+int jacobi_paralelo(double A[N][N], double *b, double *x, ScheduleType type, int chunk_size, int num_threads) {
     double *x_new = malloc(N * sizeof(double));
     int iterations = 0;
     double error = CRITERIO_PARADA + 1.0;
@@ -47,7 +47,8 @@ int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chu
 }
 
 int main() {
-  printf("O PARALELO TA COMPILANDO!");
-
+  double A[N][N], B[N], x[N];
+  read_file("../assets/linear2000.dat", A, B);
+  jacobi_paralelo(A, B, x, STATIC, 1, 4);
   return 0;
 }
