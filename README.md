@@ -31,10 +31,13 @@ Para compilar e executar os programas, utilize os seguintes comandos no seu term
 
 ```bash
 
-# Versão sequencial
-gcc -o sequencial jacobi_sequencial.c -lm
-./sequencial
+# primeiro entre no diretório build
+cd build
 
-# Versão paralela
-gcc -fopenmp -o paralela jacobi_paraleol.c -lm
-./paralela (número de threads) (schedule) (chunk)
+# Compilando e executando versão paralela (o padrão são 4 threads schedule static e 1 chunk)
+make parallel
+# ou para passar os paramêtros especificados
+make parallel ARGS="NUM_TRHEADS SCHEDULE NUM_CHUNKS"
+
+# Compilando e executando versão sequencial
+make sequantial
