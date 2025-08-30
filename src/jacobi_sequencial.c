@@ -1,6 +1,6 @@
 #include "../include/jacobi_sequencial.h"
 
-void jacobi(double **A, double b[], double p) {
+void jacobi(double A[N][N], double b[], double p) {
   double x0[N] = {0};
   double x[N] = {0};
   double erro = 0.1, erro_atual = -1, erro_max=0;
@@ -35,7 +35,8 @@ void jacobi(double **A, double b[], double p) {
 }
 
 int main(){
-  printf("O SEUQNCIAL TA SENDO COMPILADO!"); 
-
+  double A[N][N], B[N];
+  read_file("../assets/linear2000.dat", A, B);
+  jacobi(A, B, CRITERIO_PARADA);
   return 0;
 }

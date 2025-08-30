@@ -1,6 +1,7 @@
 #ifndef JACOBI_PARALELO_H
 #define JACOBI_PARALELO_H
 
+#include "../include/parser.h"
 #include "header.h"
 #include <omp.h>
 
@@ -14,6 +15,6 @@ typedef enum {
     GUIDED
 } ScheduleType;
 
-int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chunk_size, int num_threads);
+int jacobi_paralelo(double A[N][N], double *b, double *x, ScheduleType type, int chunk_size, int num_threads);
 
 #endif /* JACOBI_PARALELO_H */

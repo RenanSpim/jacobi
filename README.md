@@ -34,10 +34,11 @@ Para compilar e executar os programas, utilize os seguintes comandos no seu term
 # primeiro entre no diretório build
 cd build
 
-# Compilando e executando versão paralela (o padrão são 4 threads schedule static e 1 chunk)
-make parallel
-# ou para passar os paramêtros especificados
-make parallel ARGS="NUM_TRHEADS SCHEDULE NUM_CHUNKS"
+# Configure o projeto com CMake
+cmake ..
 
-# Compilando e executando versão sequencial
-make sequantial
+# Compilar e executar versão paralela
+make parallel
+
+# Compilar e executar versão sequencial
+make sequential
