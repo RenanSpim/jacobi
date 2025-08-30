@@ -1,4 +1,4 @@
-#include "jacobi_paralelo.h"
+#include "../include/jacobi_paralelo.h"
 
 int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chunk_size, int num_threads) {
     double *x_new = malloc(N * sizeof(double));
@@ -44,4 +44,10 @@ int jacobi_paralelo(double **A, double *b, double *x, ScheduleType type, int chu
     double tempo = (fim.tv_sec - inicio.tv_sec) + (fim.tv_nsec - inicio.tv_nsec) / 1e9;
     printf("Tempo de execução: %f segundos\n", tempo);
     return 1;
+}
+
+int main() {
+  printf("O PARALELO TA COMPILANDO!");
+
+  return 0;
 }

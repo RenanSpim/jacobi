@@ -1,4 +1,4 @@
-#include "jacobi_sequencial.h"
+#include "../include/jacobi_sequencial.h"
 
 void jacobi(double **A, double b[], double p) {
   double x0[N] = {0};
@@ -32,4 +32,10 @@ void jacobi(double **A, double b[], double p) {
   printf("Vetor de resultados: \n");
   for(int i=0;i<N;i++)
     printf("\t[%f]", x0[i]);
+}
+
+int main(){
+  printf("O SEUQNCIAL TA SENDO COMPILADO!"); 
+
+  return 0;
 }

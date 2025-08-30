@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/sequencial.dir/link.d CMakeFiles/sequencial.dir/src/jacobi_sequencial.c.o -o sequencial
