@@ -1,11 +1,8 @@
 #ifndef JACOBI_PARALELO_H
 #define JACOBI_PARALELO_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include "header.h"
 #include <omp.h>
-#include <time.h>
 
 #define N 2000
 #define CRITERIO_PARADA 1e-5
