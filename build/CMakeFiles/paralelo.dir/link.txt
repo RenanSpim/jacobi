@@ -1,1 +1,0 @@
-/usr/bin/cc -Wl,--dependency-file=CMakeFiles/paralelo.dir/link.d CMakeFiles/paralelo.dir/src/jacobi_paralelo.c.o CMakeFiles/paralelo.dir/src/parser.c.o -o paralelo  -lm /usr/lib/libgomp.so /usr/lib/libpthread.a

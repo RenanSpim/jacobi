@@ -1,14 +1,18 @@
-#include "../include/jacobi_sequencial.h"
 #include <stdio.h>
 #include <stdlib.h>
-//#define tamanho N
-#define tamanho 10
+#include <math.h>
+#include <time.h>
+
+
+#define N 10
+#define CRITERIO_PARADA 1e-5
+#define MAX_ITER 10000
 
 void lendo(double **A, double *B) {
   FILE *file = fopen("../assets/gemini10.dat", "r");
 
-  for(int i=0;i<tamanho;i++) {
-    for(int j=0;j<tamanho;j++) {
+  for(int i=0;i<N;i++) {
+    for(int j=0;j<N;j++) {
       fscanf(file, "%lf", &A[i][j]);
     }
   }
@@ -20,19 +24,18 @@ void lendo(double **A, double *B) {
 }
 
 void jacobi(double **A, double *B, double p) {
-  double x0[tamanho] = {0};
-  double x[tamanho] = {0};
+  double x0[N] = {0};
+  double x[N] = {0};
   double erro = 0.1, erro_atual = -1, erro_max=0;
   struct timespec inicio, fim;
   
   clock_gettime(CLOCK_MONOTONIC, &inicio);
   while(erro > p) {
-    for(int i=0;i<tamanho;i++) {
+    for(int i=0;i<N;i++) {
       double aux=0;
 
-      for(int j=0;j<tamanho;j++) {
+      for(int j=0;j<N;j++) {
         if(i==j) continue;
-        //printf("\n%.4lf", A[i][j]);
         aux += A[i][j] * x0[j];
       }
       x[i] = (B[i] - aux)/A[i][i];
@@ -42,8 +45,7 @@ void jacobi(double **A, double *B, double p) {
         erro = erro_atual;
     }
   
-    for(int i=0;i<tamanho;i++) {
-      //printf("\nx0=%.4lf -> x=%.4lf", x0[i], x[i]);
+    for(int i=0;i<N;i++) {
       x0[i] = x[i];
     }
   }
@@ -51,17 +53,28 @@ void jacobi(double **A, double *B, double p) {
   double tempo = (fim.tv_sec - inicio.tv_sec) + (fim.tv_nsec - inicio.tv_nsec) / 1e9;
   printf("\nTempo de execução: %f segundos\n", tempo);
 
-  printf("Vetor de resultados: \n");
-  for(int i=0;i<tamanho;i++)
-    printf("\t[%f]", x0[i]);
+  FILE *file = fopen("resultado_sequencial.txt", "w");
+
+  if (file == NULL) {
+    printf("Erro ao abrir o arquivo para escrita!\n");
+    return 0;
+  }
+
+  fprintf(file, "Resultado final do vetor x:\n");
+  for (int i = 0; i < N; i++) {
+    fprintf(file, "x[%d] = %f\n", i, x[i]);
+  }
+
+  fclose(file);
+  return 1;
 }
 
 int main(){
-  double **A = (double **)malloc(tamanho * sizeof(double *));
-  double *B = (double *)malloc(tamanho * sizeof(double));
+  double **A = (double **)malloc(N * sizeof(double *));
+  double *B = (double *)malloc(N * sizeof(double));
 
-  for(int i=0;i<tamanho;i++)
-    A[i] = (double *)malloc(tamanho*sizeof(double));
+  for(int i=0;i<N;i++)
+    A[i] = (double *)malloc(N*sizeof(double));
   
   lendo(A, B);
   jacobi(A, B, CRITERIO_PARADA);
