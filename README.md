@@ -31,10 +31,14 @@ Para compilar e executar os programas, utilize os seguintes comandos no seu term
 
 ```bash
 
-# Versão sequencial
-gcc -o sequencial jacobi_sequencial.c -lm
-./sequencial
+# primeiro entre no diretório build
+cd build
 
-# Versão paralela
-gcc -fopenmp -o paralela jacobi_paraleol.c -lm
-./paralela (número de threads) (schedule) (chunk)
+# Configure o projeto com CMake
+cmake ..
+
+# Compilar e executar versão paralela
+make parallel
+
+# Compilar e executar versão sequencial
+make sequential
