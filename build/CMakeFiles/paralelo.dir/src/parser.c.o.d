@@ -1,7 +1,7 @@
-CMakeFiles/sequencial.dir/src/jacobi_sequencial.c.o: \
- /home/mario/computaria/2sem-2025/pcp/jacobi/src/jacobi_sequencial.c \
+CMakeFiles/paralelo.dir/src/parser.c.o: \
+ /home/mario/computaria/2sem-2025/pcp/jacobi/src/parser.c \
  /usr/include/stdc-predef.h \
- /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/jacobi_sequencial.h \
+ /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/parser.h \
  /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/header.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -42,6 +42,4 @@ CMakeFiles/sequencial.dir/src/jacobi_sequencial.c.o: \
  /usr/include/bits/iscanonical.h /usr/include/time.h \
  /usr/include/bits/time.h /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h \
- /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
- /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/../include/parser.h \
- /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/../include/header.h
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h

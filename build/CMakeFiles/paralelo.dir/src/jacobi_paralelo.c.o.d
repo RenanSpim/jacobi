@@ -2,7 +2,8 @@ CMakeFiles/paralelo.dir/src/jacobi_paralelo.c.o: \
  /home/mario/computaria/2sem-2025/pcp/jacobi/src/jacobi_paralelo.c \
  /usr/include/stdc-predef.h \
  /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/jacobi_paralelo.h \
- /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/header.h \
+ /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/../include/parser.h \
+ /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/../include/header.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -43,4 +44,5 @@ CMakeFiles/paralelo.dir/src/jacobi_paralelo.c.o: \
  /usr/include/bits/time.h /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /home/mario/computaria/2sem-2025/pcp/jacobi/src/../include/header.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/omp.h

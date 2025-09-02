@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mario/computaria/2sem-2025/pcp/jacobi/src/jacobi_sequencial.c" "CMakeFiles/sequencial.dir/src/jacobi_sequencial.c.o" "gcc" "CMakeFiles/sequencial.dir/src/jacobi_sequencial.c.o.d"
+  "/home/mario/computaria/2sem-2025/pcp/jacobi/src/parser.c" "CMakeFiles/sequencial.dir/src/parser.c.o" "gcc" "CMakeFiles/sequencial.dir/src/parser.c.o.d"
   "" "sequencial" "gcc" "CMakeFiles/sequencial.dir/link.d"
   )
 

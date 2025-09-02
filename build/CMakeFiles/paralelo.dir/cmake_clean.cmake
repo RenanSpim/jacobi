@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/paralelo.dir/link.d"
   "CMakeFiles/paralelo.dir/src/jacobi_paralelo.c.o"
   "CMakeFiles/paralelo.dir/src/jacobi_paralelo.c.o.d"
+  "CMakeFiles/paralelo.dir/src/parser.c.o"
+  "CMakeFiles/paralelo.dir/src/parser.c.o.d"
   "paralelo"
   "paralelo.pdb"
 )
