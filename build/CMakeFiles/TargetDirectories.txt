@@ -1,6 +1,0 @@
-/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles/sequencial.dir
-/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles/paralelo.dir
-/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles/parallel.dir
-/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles/sequential.dir
-/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles/edit_cache.dir
-/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles/rebuild_cache.dir
