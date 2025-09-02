@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sequencial.dir/link.d"
   "CMakeFiles/sequencial.dir/src/jacobi_sequencial.c.o"
   "CMakeFiles/sequencial.dir/src/jacobi_sequencial.c.o.d"
+  "CMakeFiles/sequencial.dir/src/parser.c.o"
+  "CMakeFiles/sequencial.dir/src/parser.c.o.d"
   "sequencial"
   "sequencial.pdb"
 )

@@ -67,8 +67,8 @@ include CMakeFiles/parallel.dir/compiler_depend.make
 include CMakeFiles/parallel.dir/progress.make
 
 CMakeFiles/parallel: paralelo
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Executando com: threads=\$$4, schedule=\$$static, chunk=\$$1"
-	sh -c "'test" -n "\$$\$$ARGS" && ./paralelo "\$$\$$ARGS" || ./paralelo 4 static "1'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Executando programa paralelo"
+	./paralelo
 
 CMakeFiles/parallel.dir/codegen:
 .PHONY : CMakeFiles/parallel.dir/codegen

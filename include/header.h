@@ -6,4 +6,7 @@
 #include <math.h>
 #include <time.h>
 
+#define N 2000
+#define CRITERIO_PARADA 1e-5
+
 #endif

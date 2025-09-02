@@ -3,6 +3,7 @@ paralelo: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o \
   CMakeFiles/paralelo.dir/src/jacobi_paralelo.c.o \
+  CMakeFiles/paralelo.dir/src/parser.c.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so \
@@ -39,6 +40,8 @@ paralelo: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o:
 
 CMakeFiles/paralelo.dir/src/jacobi_paralelo.c.o:
+
+CMakeFiles/paralelo.dir/src/parser.c.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so:
 

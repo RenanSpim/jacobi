@@ -67,6 +67,7 @@ include CMakeFiles/sequential.dir/compiler_depend.make
 include CMakeFiles/sequential.dir/progress.make
 
 CMakeFiles/sequential: sequencial
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mario/computaria/2sem-2025/pcp/jacobi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Executando programa sequencial"
 	/home/mario/computaria/2sem-2025/pcp/jacobi/build/sequencial
 
 CMakeFiles/sequential.dir/codegen:
