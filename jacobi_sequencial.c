@@ -9,7 +9,7 @@
 #define MAX_ITER 10000
 
 void lendo(double **A, double *B) {
-  FILE *file = fopen("../assets/gemini10.dat", "r");
+  FILE *file = fopen("gemini10.dat", "r");
 
   for(int i=0;i<N;i++) {
     for(int j=0;j<N;j++) {
@@ -21,6 +21,8 @@ void lendo(double **A, double *B) {
     fscanf(file, "%lf", &B[i]);
     i++;
   }
+
+  fclose(file);
 }
 
 void jacobi(double **A, double *B, double p) {
@@ -57,7 +59,6 @@ void jacobi(double **A, double *B, double p) {
 
   if (file == NULL) {
     printf("Erro ao abrir o arquivo para escrita!\n");
-    return 0;
   }
 
   fprintf(file, "Resultado final do vetor x:\n");
@@ -66,7 +67,6 @@ void jacobi(double **A, double *B, double p) {
   }
 
   fclose(file);
-  return 1;
 }
 
 int main(){
