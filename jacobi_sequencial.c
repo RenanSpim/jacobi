@@ -9,7 +9,7 @@
 #define MAX_ITER 10000
 
 void lendo(double **A, double *B) {
-  FILE *file = fopen("../assets/gemini10.dat", "r");
+  FILE *file = fopen("sistlinear2k.dat", "r");
 
   for(int i=0;i<N;i++) {
     for(int j=0;j<N;j++) {
@@ -58,7 +58,6 @@ void jacobi(double **A, double *B, double p) {
 
   if (file == NULL) {
     printf("Erro ao abrir o arquivo para escrita!\n");
-    return 0;
   }
 
   fprintf(file, "Resultado final do vetor x:\n");
@@ -67,7 +66,6 @@ void jacobi(double **A, double *B, double p) {
   }
 
   fclose(file);
-  return 1;
 }
 
 int main(){
@@ -77,7 +75,7 @@ int main(){
   for(int i=0;i<N;i++)
     A[i] = (double *)malloc(N*sizeof(double));
   
-  lendo(A, B, "sistlinear2k.dat");
+  lendo(A, B);
   jacobi(A, B, CRITERIO_PARADA);
 
   // Libera a memória alocada
