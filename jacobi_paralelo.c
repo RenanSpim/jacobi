@@ -4,7 +4,7 @@
 #include <time.h>
 #include <omp.h>
 
-#define N 2000
+#define N 10
 #define CRITERIO_PARADA 1e-5
 #define MAX_ITER 10000
 

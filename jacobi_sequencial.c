@@ -49,6 +49,7 @@ void jacobi(double **A, double *B, double p) {
   
     for(int i=0;i<N;i++) {
       x0[i] = x[i];
+      // printf("x0 = %f\t x1 = %f\n", x0[i], x[i]);
     }
   }
   clock_gettime(CLOCK_MONOTONIC, &fim);
